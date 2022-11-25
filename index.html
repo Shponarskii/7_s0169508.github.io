@@ -2,10 +2,22 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Задание 6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Задание 7</title>
+
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+
+    <script src="slick/slick.min.js"></script>
+    <script src="calculator.js"></script>
 </head>
 <body>
     
@@ -21,7 +33,7 @@
     </div>
 
 
-    <div class="col-12 mx-sm-auto container-fluid p-3 mb-2 bg-dark text-white mt-3" id="ad">
+    <div class="col-12 mx-auto container-fluid p-3 mb-2 bg-dark text-white mt-3" id="ad">
 
         
         <h1 id="d">Калькулятор 1</h1>
@@ -37,7 +49,7 @@
             
         <form class = "col-12">
 
-            <input class = "form-control col" id = "tsize" placeholder = "Введите данные" type = "text">
+            <input class = "form-control col" id = "tsize" placeholder = "Введите количество товара" type = "text">
 
             <div class = "input-group">
                 <span class = "input-group-text">Вид товара</span>
@@ -61,9 +73,30 @@
         <div id = "cost"></div>
 
 
-        <h3 id="y">Галерея</h3>
+        <h1 id="y" class="text-center">Галерея</h1>
+        
+
+        <div class = "col">
+            <div class = "slider multiple-items">
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/000f_7290754.jpg" alt = "1"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/1-14.jpg" alt = "2"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/2-16.jpg" alt = "3"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/3-11.jpg" alt = "4"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/0_70bfb_209fe817_XL.jpg" alt = "5"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/0_70bfb_209fe817_XL.jpg" alt = "6"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/3-8.jpg" alt = "7"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/187604chan1309313071950.jpg" alt = "8"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/555946b1b027f7626674951f6f236e9198f06211.jpg" alt = "9"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/1654321.jpg" alt = "10"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/81074043_lovelylandscapes101-1.jpg" alt = "11"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/116222934_large_4278666_peyzaz230.jpg" alt = "12"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/1160334673_2.jpg" alt = "13"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/1306791708_1306786011_393455.jpg" alt = "14"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/1334039345_podborka_84.jpg" alt = "15"></a></div>
+                <div><a href = "https://bipbap.ru/pictures/samye-krasivye-kartinki-35-foto.html"><img class = "image" src = "https://bipbap.ru/wp-content/uploads/2017/04/ec7a62641d394a522016f8a9f1e0b742_full.jpg" alt = "16"></a></div>
+            </div>
+        </div>
 
     </div>
-    <script src="calculator.js"></script>
 </body>
 </html>
